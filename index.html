@@ -1,337 +1,372 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Where Words Remain — Andina Azya Rahmadani</title>
+<title>Where Words Remain — Andina Azya Rahmadani</title>
 
-    <meta name="description"
-          content="Where Words Remain — personal poetry archive by Andina Azya Rahmadani.">
+<meta name="description" content="Where Words Remain — a personal poetry archive by Andina Azya Rahmadani.">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        body {
-            margin: 0;
-            background: #f5f1eb;
-            color: #292522;
-            font-family: Arial, sans-serif;
-            line-height: 1.8;
-        }
+body {
+    margin: 0;
+    background: #f4f0ea;
+    color: #282522;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-        /* NAVIGATION */
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 28px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 28px 7%;
-        }
+.logo {
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
 
-        .logo {
-            font-family: Georgia, serif;
-            font-size: 24px;
-        }
+.menu {
+    display: flex;
+    gap: 28px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
-        .menu {
-            display: flex;
-            gap: 25px;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 7%;
+    background:
+        radial-gradient(circle at 80% 25%, #e5ddd2 0%, transparent 30%),
+        linear-gradient(135deg, #eee7dd, #f7f3ed);
+}
 
-        /* HOME */
+.hero-inner {
+    max-width: 950px;
+    margin: auto;
+    width: 100%;
+}
 
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(
-                180deg,
-                #ebe3d9,
-                #f5f1eb
-            );
-        }
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: .5;
+}
 
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 130px 7%;
-        }
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(65px, 12vw, 145px);
+    line-height: .88;
+    font-weight: normal;
+    margin: 25px 0 35px;
+}
 
-        .small-title {
-            font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            opacity: 0.55;
-        }
+h1 span {
+    font-style: italic;
+}
 
-        h1 {
-            font-family: Georgia, serif;
-            font-size: clamp(65px, 11vw, 140px);
-            font-weight: normal;
-            line-height: 0.9;
-            margin: 20px 0 35px;
-        }
+.tagline {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    max-width: 500px;
+}
 
-        h1 em {
-            font-weight: normal;
-        }
+.button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 13px 22px;
+    border: 1px solid #282522;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: .3s;
+}
 
-        .intro {
-            font-family: Georgia, serif;
-            font-size: 23px;
-            line-height: 1.4;
-        }
+.button:hover {
+    background: #282522;
+    color: #f4f0ea;
+}
 
-        .button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 20px;
-            border: 1px solid #292522;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
+section {
+    padding: 110px 7%;
+}
 
-        /* SECTIONS */
+.section-inner {
+    max-width: 1100px;
+    margin: auto;
+}
 
-        section {
-            padding: 100px 7%;
-        }
+.section-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: .5;
+}
 
-        h2 {
-            font-family: Georgia, serif;
-            font-size: 65px;
-            font-weight: normal;
-            margin-top: 0;
-        }
+h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(50px, 8vw, 85px);
+    font-weight: normal;
+    line-height: 1;
+    margin: 20px 0 65px;
+}
 
-        /* POEM CARDS */
+.poems {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
 
-        .poems {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+.poem-card {
+    border-top: 1px solid #9f9991;
+    padding-top: 25px;
+    transition: transform .3s;
+}
 
-        .poem-card {
-            border-top: 1px solid #aaa29a;
-            padding-top: 25px;
-        }
+.poem-card:hover {
+    transform: translateY(-6px);
+}
 
-        .poem-card h3 {
-            font-family: Georgia, serif;
-            font-size: 32px;
-            font-weight: normal;
-        }
+.poem-number {
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: .45;
+}
 
-        .poem-card p {
-            font-size: 14px;
-            opacity: 0.7;
-        }
+.poem-card h3 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 1.15;
+    margin: 25px 0 15px;
+}
 
-        .read {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+.poem-card p {
+    font-size: 13px;
+    opacity: .65;
+}
 
-        /* POEM PAGES */
+.read {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
-        .poem {
-            background: #e9e1d7;
-        }
+.poem-page {
+    background: #e8dfd4;
+}
 
-        .poem.dark {
-            background: #292522;
-            color: #f5f1eb;
-        }
+.poem-page.dark {
+    background: #282522;
+    color: #f4f0ea;
+}
 
-        .poem-content {
-            max-width: 750px;
-            margin: auto;
-        }
+.poem-inner {
+    max-width: 760px;
+    margin: auto;
+}
 
-        .poem-content h2 {
-            font-size: 80px;
-            margin-bottom: 10px;
-        }
+.poem-inner h2 {
+    font-size: clamp(55px, 8vw, 90px);
+    margin-bottom: 10px;
+}
 
-        .author {
-            font-size: 12px;
-            opacity: 0.6;
-            margin-bottom: 55px;
-        }
+.author {
+    font-size: 11px;
+    letter-spacing: 1px;
+    opacity: .55;
+    margin-bottom: 70px;
+}
 
-        .empty-poem {
-            font-family: Georgia, serif;
-            font-size: 20px;
-            font-style: italic;
-            opacity: 0.45;
-            padding: 50px 0;
-        }
+.placeholder {
+    min-height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    font-family: Georgia, serif;
+    font-style: italic;
+    opacity: .45;
+}
 
-        .copyright {
-            margin-top: 70px;
-            padding-top: 20px;
-            border-top: 1px solid currentColor;
-            font-size: 10px;
-            opacity: 0.55;
-        }
+.copyright {
+    margin-top: 55px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    opacity: .5;
+}
 
-        /* ABOUT */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
 
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-        }
+.about-text {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    max-width: 550px;
+}
 
-        .about-text {
-            font-family: Georgia, serif;
-            font-size: 24px;
-        }
+.archive {
+    border-top: 1px solid #9f9991;
+}
 
-        /* ARCHIVE */
+.archive-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    padding: 23px 0;
+    border-bottom: 1px solid #9f9991;
+}
 
-        .archive-item {
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            padding: 20px 0;
-            border-top: 1px solid #aaa29a;
-        }
+.archive-row strong {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: normal;
+}
 
-        .archive-item strong {
-            font-family: Georgia, serif;
-            font-size: 27px;
-            font-weight: normal;
-        }
+footer {
+    padding: 40px 7%;
+    border-top: 1px solid #9f9991;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
-        /* FOOTER */
+@media (max-width: 750px) {
 
-        footer {
-            border-top: 1px solid #aaa29a;
-            padding: 35px 7%;
-            font-size: 11px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+    nav {
+        padding: 22px 6%;
+    }
 
-        /* MOBILE */
+    .logo {
+        font-size: 18px;
+    }
 
-        @media (max-width: 750px) {
+    .menu {
+        gap: 12px;
+    }
 
-            nav {
-                padding: 22px 6%;
-            }
+    .menu a:last-child {
+        display: none;
+    }
 
-            .menu {
-                gap: 12px;
-            }
+    .hero {
+        padding: 120px 6% 80px;
+    }
 
-            .menu a:last-child {
-                display: none;
-            }
+    h1 {
+        font-size: 72px;
+    }
 
-            .hero-content {
-                padding: 100px 6%;
-            }
+    .tagline {
+        font-size: 19px;
+    }
 
-            h1 {
-                font-size: 70px;
-            }
+    section {
+        padding: 80px 6%;
+    }
 
-            section {
-                padding: 75px 6%;
-            }
+    .poems {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
 
-            h2 {
-                font-size: 50px;
-            }
+    .about {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
-            .poems {
-                grid-template-columns: 1fr;
-            }
+    .about-text {
+        font-size: 20px;
+    }
 
-            .about {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
+    .archive-row {
+        grid-template-columns: 65px 1fr;
+    }
 
-            .poem-content h2 {
-                font-size: 55px;
-            }
-
-            .empty-poem {
-                font-size: 18px;
-            }
-        }
-    </style>
+    .archive-row strong {
+        font-size: 20px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- HOME -->
+<nav>
+    <a href="#home" class="logo">Where Words Remain</a>
 
-    <div class="hero" id="home">
+    <div class="menu">
+        <a href="#poems">Poems</a>
+        <a href="#about">About</a>
+        <a href="#archive">Archive</a>
+    </div>
+</nav>
 
-        <nav>
 
-            <a class="logo" href="#home">
-                Where Words Remain
-            </a>
+<!-- HOME -->
 
-            <div class="menu">
-                <a href="#poems">Poems</a>
-                <a href="#about">About</a>
-                <a href="#archive">Archive</a>
-            </div>
+<header class="hero" id="home">
+    <div class="hero-inner">
 
-        </nav>
-
-        <div class="hero-content">
-
-            <div class="small-title">
-                A Personal Poetry Archive
-            </div>
-
-            <h1>
-                Where Words<br>
-                <em>Remain.</em>
-            </h1>
-
-            <div class="intro">
-                Some feelings are meant to be written,
-                <br>
-                so they can remain.
-            </div>
-
-            <a class="button" href="#poems">
-                Explore My Poems
-            </a>
-
+        <div class="eyebrow">
+            A Personal Poetry Archive
         </div>
 
+        <h1>
+            Where Words<br>
+            <span>Remain.</span>
+        </h1>
+
+        <div class="tagline">
+            Some feelings are meant to be written,
+            so they can remain.
+        </div>
+
+        <a href="#poems" class="button">
+            Explore My Poems
+        </a>
+
     </div>
+</header>
 
 
-    <!-- POEMS -->
+<!-- POEMS -->
 
-    <section id="poems">
+<section id="poems">
 
-        <div class="small-title">
+    <div class="section-inner">
+
+        <div class="section-label">
             Selected Writings
         </div>
 
@@ -339,246 +374,223 @@
 
         <div class="poems">
 
-            <div class="poem-card">
+            <article class="poem-card">
+                <div class="poem-number">01</div>
 
-                <h3>
-                    My Lost Dreams
-                </h3>
-
-                <p>
-                    By Andina Azya Rahmadani
-                </p>
-
-                <a class="read" href="#my-lost-dreams">
-                    Read poem →
-                </a>
-
-            </div>
-
-
-            <div class="poem-card">
-
-                <h3>
-                    Light in the Darkness
-                </h3>
+                <h3>My Lost Dreams</h3>
 
                 <p>
                     By Andina Azya Rahmadani
                 </p>
 
-                <a class="read" href="#light-in-the-darkness">
+                <a href="#my-lost-dreams" class="read">
                     Read poem →
                 </a>
+            </article>
 
-            </div>
 
+            <article class="poem-card">
+                <div class="poem-number">02</div>
 
-            <div class="poem-card">
-
-                <h3>
-                    Kedamaian Diri
-                </h3>
+                <h3>Light in the Darkness</h3>
 
                 <p>
                     By Andina Azya Rahmadani
                 </p>
 
-                <a class="read" href="#kedamaian-diri">
+                <a href="#light-in-the-darkness" class="read">
                     Read poem →
                 </a>
-
-            </div>
-
-        </div>
-
-    </section>
+            </article>
 
 
-    <!-- MY LOST DREAMS -->
+            <article class="poem-card">
+                <div class="poem-number">03</div>
 
-    <section class="poem" id="my-lost-dreams">
-
-        <div class="poem-content">
-
-            <div class="small-title">
-                Poem I
-            </div>
-
-            <h2>
-                My Lost Dreams
-            </h2>
-
-            <div class="author">
-                By Andina Azya Rahmadani
-            </div>
-
-            <div class="empty-poem">
-                Your poem will appear here.
-            </div>
-
-            <div class="copyright">
-                © Andina Azya Rahmadani. All rights reserved.
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- LIGHT IN THE DARKNESS -->
-
-    <section class="poem dark" id="light-in-the-darkness">
-
-        <div class="poem-content">
-
-            <div class="small-title">
-                Poem II
-            </div>
-
-            <h2>
-                Light in the Darkness
-            </h2>
-
-            <div class="author">
-                By Andina Azya Rahmadani
-            </div>
-
-            <div class="empty-poem">
-                Your poem will appear here.
-            </div>
-
-            <div class="copyright">
-                © Andina Azya Rahmadani. All rights reserved.
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- KEDAMAIAN DIRI -->
-
-    <section class="poem" id="kedamaian-diri">
-
-        <div class="poem-content">
-
-            <div class="small-title">
-                Poem III
-            </div>
-
-            <h2>
-                Kedamaian Diri
-            </h2>
-
-            <div class="author">
-                By Andina Azya Rahmadani
-            </div>
-
-            <div class="empty-poem">
-                Your poem will appear here.
-            </div>
-
-            <div class="copyright">
-                © Andina Azya Rahmadani. All rights reserved.
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-        <div class="about">
-
-            <div>
-
-                <div class="small-title">
-                    About the Author
-                </div>
-
-                <h2>
-                    Words,<br>
-                    kept here.
-                </h2>
-
-            </div>
-
-            <div class="about-text">
+                <h3>Kedamaian Diri</h3>
 
                 <p>
-                    A personal archive for poems,
-                    thoughts, and words that deserve
-                    a place to remain.
+                    By Andina Azya Rahmadani
                 </p>
 
-                <p>
-                    More writings will be added over time.
-                </p>
-
-            </div>
+                <a href="#kedamaian-diri" class="read">
+                    Read poem →
+                </a>
+            </article>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ARCHIVE -->
+<!-- POEM 01 -->
 
-    <section id="archive">
+<section class="poem-page" id="my-lost-dreams">
 
-        <div class="small-title">
+    <div class="poem-inner">
+
+        <div class="section-label">
+            Poem I
+        </div>
+
+        <h2>My Lost Dreams</h2>
+
+        <div class="author">
+            By Andina Azya Rahmadani
+        </div>
+
+        <div class="placeholder">
+            Your poem will appear here.
+        </div>
+
+        <div class="copyright">
+            © Andina Azya Rahmadani. All rights reserved.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- POEM 02 -->
+
+<section class="poem-page dark" id="light-in-the-darkness">
+
+    <div class="poem-inner">
+
+        <div class="section-label">
+            Poem II
+        </div>
+
+        <h2>Light in the Darkness</h2>
+
+        <div class="author">
+            By Andina Azya Rahmadani
+        </div>
+
+        <div class="placeholder">
+            Your poem will appear here.
+        </div>
+
+        <div class="copyright">
+            © Andina Azya Rahmadani. All rights reserved.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- POEM 03 -->
+
+<section class="poem-page" id="kedamaian-diri">
+
+    <div class="poem-inner">
+
+        <div class="section-label">
+            Poem III
+        </div>
+
+        <h2>Kedamaian Diri</h2>
+
+        <div class="author">
+            By Andina Azya Rahmadani
+        </div>
+
+        <div class="placeholder">
+            Your poem will appear here.
+        </div>
+
+        <div class="copyright">
+            © Andina Azya Rahmadani. All rights reserved.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="section-inner about">
+
+        <div>
+
+            <div class="section-label">
+                About the Author
+            </div>
+
+            <h2>
+                Words,<br>
+                kept here.
+            </h2>
+
+        </div>
+
+        <div class="about-text">
+
+            <p>
+                This is a personal archive for poems,
+                thoughts, and words that deserve a place
+                to remain.
+            </p>
+
+            <p>
+                More writings will be added over time.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ARCHIVE -->
+
+<section id="archive">
+
+    <div class="section-inner">
+
+        <div class="section-label">
             A Record of Works
         </div>
 
-        <h2>
-            Archive
-        </h2>
+        <h2>Archive</h2>
 
-        <div class="archive-item">
+        <div class="archive">
 
-            <span>—</span>
+            <div class="archive-row">
+                <span>—</span>
+                <strong>My Lost Dreams</strong>
+            </div>
 
-            <strong>
-                My Lost Dreams
-            </strong>
+            <div class="archive-row">
+                <span>—</span>
+                <strong>Light in the Darkness</strong>
+            </div>
 
-        </div>
-
-        <div class="archive-item">
-
-            <span>—</span>
-
-            <strong>
-                Light in the Darkness
-            </strong>
+            <div class="archive-row">
+                <span>—</span>
+                <strong>Kedamaian Diri</strong>
+            </div>
 
         </div>
 
-        <div class="archive-item">
+    </div>
 
-            <span>—</span>
-
-            <strong>
-                Kedamaian Diri
-            </strong>
-
-        </div>
-
-    </section>
+</section>
 
 
-    <!-- FOOTER -->
-
-    <footer>
-
-        Where Words Remain
-        <br><br>
-        © Andina Azya Rahmadani
-
-    </footer>
+<footer>
+    Where Words Remain
+    <br><br>
+    © Andina Azya Rahmadani
+</footer>
 
 </body>
 </html>
