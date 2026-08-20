@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,19 +8,25 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="google-site-verification" content="COvB6wYR0l9hxY2O_hAEqm0nVlQq3Eo6xtaTBjJhpNs">
+<meta name="google-site-verification"
+      content="COvB6wYR0l9hxY2O_hAEqm0nVlQq3Eo6xtaTBjJhpNs">
 
 <title>Where Words Remain — Andina Azya Rahmadani</title>
 
 <meta name="description"
-content="Where Words Remain — a personal poetry archive by Andina Azya Rahmadani.">
+      content="Where Words Remain — a personal poetry archive by Andina Azya Rahmadani.">
 
-<meta name="author" content="Andina Azya Rahmadani">
+<meta name="author"
+      content="Andina Azya Rahmadani">
 
-<link rel="canonical" href="https://andinaazya.github.io/">
-
+<link rel="canonical"
+      href="https://andinaazya.github.io/">
 
 <style>
+
+/* =========================
+   BASE
+========================= */
 
 * {
     box-sizing: border-box;
@@ -49,12 +55,15 @@ a {
 }
 
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
 
     padding: 30px 7%;
@@ -63,7 +72,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    z-index: 10;
+    z-index: 20;
 }
 
 .logo {
@@ -80,22 +89,47 @@ nav {
     text-transform: uppercase;
 }
 
+.menu a {
+    position: relative;
+}
 
-/* HERO */
+.menu a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: #292621;
+
+    transition: .3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
-    min-height: 100vh;
+    min-height: 92vh;
 
     display: flex;
     align-items: center;
 
-    padding: 130px 7% 100px;
+    padding: 150px 7% 110px;
 
     background:
         radial-gradient(
-            circle at 80% 20%,
+            circle at 82% 20%,
             rgba(215, 204, 190, .55),
-            transparent 30%
+            transparent 31%
         ),
         linear-gradient(
             135deg,
@@ -106,7 +140,7 @@ nav {
 
 .hero-inner {
     width: 100%;
-    max-width: 1150px;
+    max-width: 1120px;
 
     margin: auto;
 }
@@ -120,14 +154,14 @@ nav {
 }
 
 h1 {
+    margin: 30px 0 38px;
+
     font-family: Georgia, serif;
     font-weight: normal;
 
-    font-size: clamp(70px, 13vw, 155px);
+    font-size: clamp(65px, 11vw, 145px);
 
     line-height: .86;
-
-    margin: 28px 0 38px;
 
     letter-spacing: -4px;
 }
@@ -137,18 +171,34 @@ h1 em {
 }
 
 .tagline {
-    max-width: 480px;
+    max-width: 460px;
 
     font-family: Georgia, serif;
 
-    font-size: 21px;
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: 1.55;
 }
+
+.hero-note {
+    margin-top: 70px;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    opacity: .4;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
 
 .button {
     display: inline-block;
 
-    margin-top: 35px;
+    margin-top: 32px;
 
     padding: 13px 22px;
 
@@ -156,6 +206,7 @@ h1 em {
 
     font-size: 10px;
     letter-spacing: 2px;
+
     text-transform: uppercase;
 
     transition: .3s;
@@ -167,7 +218,9 @@ h1 em {
 }
 
 
-/* SECTIONS */
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 section {
     padding: 120px 7%;
@@ -181,25 +234,31 @@ section {
 .section-label {
     font-size: 10px;
     letter-spacing: 4px;
+
     text-transform: uppercase;
 
     opacity: .5;
 }
 
 h2 {
+    margin: 22px 0 65px;
+
     font-family: Georgia, serif;
+    font-weight: normal;
 
     font-size: clamp(55px, 8vw, 90px);
 
     line-height: .95;
-
-    font-weight: normal;
-
-    margin: 22px 0 70px;
 }
 
 
-/* POEMS */
+/* =========================
+   POEMS
+========================= */
+
+#poems {
+    background: #f5f0e8;
+}
 
 .poem-list {
     border-top: 1px solid #aaa198;
@@ -218,12 +277,16 @@ h2 {
 
     border-bottom: 1px solid #aaa198;
 
-    transition: .35s;
+    transition:
+        padding .35s,
+        background .35s;
 }
 
 .poem-row:hover {
     padding-left: 18px;
     padding-right: 18px;
+
+    background: rgba(41, 38, 33, .035);
 }
 
 .poem-number {
@@ -236,17 +299,23 @@ h2 {
 .poem-title {
     font-family: Georgia, serif;
 
-    font-size: clamp(25px, 4vw, 40px);
+    font-size: clamp(26px, 4vw, 40px);
 
     font-weight: normal;
 }
 
 .poem-arrow {
-    font-size: 22px;
-
     text-align: right;
 
+    font-size: 22px;
+
     opacity: .5;
+
+    transition: transform .3s;
+}
+
+.poem-row:hover .poem-arrow {
+    transform: translateX(5px);
 }
 
 
@@ -259,6 +328,8 @@ h2 {
 .coming-soon:hover {
     padding-left: 0;
     padding-right: 0;
+
+    background: transparent;
 }
 
 .coming-soon .poem-title {
@@ -282,7 +353,14 @@ h2 {
 }
 
 
-/* ABOUT */
+/* =========================
+   ABOUT THE AUTHOR
+========================= */
+
+.about-section {
+    background: #292621;
+    color: #f5f0e8;
+}
 
 .about-grid {
     display: grid;
@@ -290,20 +368,48 @@ h2 {
     grid-template-columns: 1fr 1fr;
 
     gap: 100px;
+
+    align-items: start;
+}
+
+.about-section .section-label {
+    opacity: .5;
+}
+
+.about-section h2 {
+    margin-bottom: 0;
 }
 
 .about-text {
-    max-width: 560px;
+    max-width: 530px;
+
+    padding-top: 8px;
 
     font-family: Georgia, serif;
 
-    font-size: 22px;
+    font-size: 21px;
 
-    line-height: 1.7;
+    line-height: 1.75;
+}
+
+.about-text p {
+    margin: 0 0 30px;
+}
+
+.about-quote {
+    font-style: italic;
+
+    opacity: .8;
 }
 
 
-/* ARCHIVE */
+/* =========================
+   ARCHIVE
+========================= */
+
+.archive-section {
+    background: #f5f0e8;
+}
 
 .archive-list {
     border-top: 1px solid #aaa198;
@@ -312,33 +418,122 @@ h2 {
 .archive-row {
     display: grid;
 
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 100px 1fr 35px;
 
-    padding: 24px 0;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px 0;
 
     border-bottom: 1px solid #aaa198;
-}
 
-.archive-title {
-    font-family: Georgia, serif;
-
-    font-size: 25px;
-}
-
-.archive-link {
-    transition: .35s;
+    transition:
+        padding .35s,
+        background .35s;
 }
 
 .archive-link:hover {
     padding-left: 18px;
     padding-right: 18px;
+
+    background: rgba(41, 38, 33, .035);
+}
+
+.archive-year {
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    opacity: .45;
+}
+
+.archive-title {
+    font-family: Georgia, serif;
+
+    font-size: 26px;
+}
+
+.archive-arrow {
+    text-align: right;
+
+    font-size: 18px;
+
+    opacity: .45;
+
+    transition: transform .3s;
+}
+
+.archive-link:hover .archive-arrow {
+    transform: translateX(5px);
+}
+
+.archive-disabled {
+    opacity: .55;
+}
+
+.archive-disabled .archive-arrow {
+    opacity: .3;
 }
 
 
-/* FOOTER */
+/* =========================
+   CLOSING SECTION
+========================= */
+
+.closing {
+    padding: 100px 7%;
+
+    background: #292621;
+    color: #f5f0e8;
+
+    text-align: center;
+}
+
+.closing-inner {
+    max-width: 700px;
+    margin: auto;
+}
+
+.closing-mark {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    opacity: .5;
+
+    margin-bottom: 25px;
+}
+
+.closing-text {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    line-height: 1.5;
+}
+
+.closing-small {
+    margin-top: 30px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    opacity: .45;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    padding: 45px 7%;
+    padding: 42px 7%;
+
+    background: #f5f0e8;
+    color: #292621;
 
     border-top: 1px solid #aaa198;
 
@@ -349,8 +544,17 @@ footer {
     text-transform: uppercase;
 }
 
+.footer-inner {
+    display: flex;
 
-/* MOBILE */
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 700px) {
 
@@ -371,16 +575,23 @@ footer {
     }
 
     .hero {
-        padding: 120px 6% 90px;
+        min-height: 88vh;
+
+        padding: 125px 6% 90px;
     }
 
     h1 {
-        font-size: 72px;
+        font-size: 70px;
+
         letter-spacing: -2px;
     }
 
     .tagline {
         font-size: 18px;
+    }
+
+    .hero-note {
+        margin-top: 55px;
     }
 
     section {
@@ -419,20 +630,44 @@ footer {
     }
 
     .about-text {
+        padding-top: 0;
+
         font-size: 19px;
     }
 
     .archive-row {
-        grid-template-columns: 60px 1fr;
+        grid-template-columns: 60px 1fr 25px;
+
+        gap: 12px;
     }
 
     .archive-title {
-        font-size: 20px;
+        font-size: 21px;
     }
 
     .archive-link:hover {
         padding-left: 8px;
         padding-right: 8px;
+    }
+
+    .closing {
+        padding: 80px 6%;
+    }
+
+    .closing-text {
+        font-size: 21px;
+    }
+
+    footer {
+        padding: 35px 6%;
+    }
+
+    .footer-inner {
+        display: block;
+    }
+
+    .footer-right {
+        margin-top: 12px;
     }
 
 }
@@ -445,7 +680,9 @@ footer {
 <body>
 
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
@@ -472,7 +709,9 @@ footer {
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero" id="home">
 
@@ -488,22 +727,26 @@ footer {
         </h1>
 
         <div class="tagline">
-
             Some feelings are meant to be written,
             so they can remain.
-
         </div>
 
         <a href="#poems" class="button">
             Explore My Poems
         </a>
 
+        <div class="hero-note">
+            Poems · Thoughts · Things worth remembering
+        </div>
+
     </div>
 
 </header>
 
 
-<!-- POEMS -->
+<!-- =========================
+     POEMS
+========================= -->
 
 <section id="poems">
 
@@ -598,9 +841,11 @@ footer {
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT THE AUTHOR
+========================= -->
 
-<section id="about">
+<section id="about" class="about-section">
 
     <div class="section-inner about-grid">
 
@@ -624,7 +869,7 @@ footer {
                 Writer &amp; Poet
             </p>
 
-            <p>
+            <p class="about-quote">
                 “What is written may fade from sight,
                 but never from where it once lived.”
             </p>
@@ -636,9 +881,11 @@ footer {
 </section>
 
 
-<!-- ARCHIVE -->
+<!-- =========================
+     ARCHIVE
+========================= -->
 
-<section id="archive">
+<section id="archive" class="archive-section">
 
     <div class="section-inner">
 
@@ -659,12 +906,16 @@ footer {
             <a href="archive/my-lost-dreams.html"
                class="archive-row archive-link">
 
-                <span>
+                <div class="archive-year">
                     2024
-                </span>
+                </div>
 
                 <div class="archive-title">
                     My Lost Dreams
+                </div>
+
+                <div class="archive-arrow">
+                    →
                 </div>
 
             </a>
@@ -672,14 +923,18 @@ footer {
 
             <!-- LIGHT IN THE DARKNESS -->
 
-            <div class="archive-row">
+            <div class="archive-row archive-disabled">
 
-                <span>
+                <div class="archive-year">
                     —
-                </span>
+                </div>
 
                 <div class="archive-title">
                     Light in the Darkness
+                </div>
+
+                <div class="archive-arrow">
+                    —
                 </div>
 
             </div>
@@ -687,14 +942,18 @@ footer {
 
             <!-- KEDAMAIAN DIRI -->
 
-            <div class="archive-row">
+            <div class="archive-row archive-disabled">
 
-                <span>
+                <div class="archive-year">
                     —
-                </span>
+                </div>
 
                 <div class="archive-title">
                     Kedamaian Diri
+                </div>
+
+                <div class="archive-arrow">
+                    —
                 </div>
 
             </div>
@@ -707,15 +966,49 @@ footer {
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     CLOSING
+========================= -->
+
+<section class="closing">
+
+    <div class="closing-inner">
+
+        <div class="closing-mark">
+            —
+        </div>
+
+        <div class="closing-text">
+            Some words are written once,
+            but remain for much longer.
+        </div>
+
+        <div class="closing-small">
+            Where Words Remain
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-    Where Words Remain
+    <div class="footer-inner">
 
-    <br><br>
+        <div>
+            Where Words Remain
+        </div>
 
-    © Andina Azya Rahmadani
+        <div class="footer-right">
+            © Andina Azya Rahmadani
+        </div>
+
+    </div>
 
 </footer>
 
