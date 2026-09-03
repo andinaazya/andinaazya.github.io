@@ -1,17 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Light in the Darkness — Personal Work Archive</title>
+<title>Light in the Darkness — Archive — Andina Azya Rahmadani</title>
 
-<meta name="description" content="Personal work archive for Light in the Darkness by Andina Azya Rahmadani.">
+<meta name="description" content="The archive of Light in the Darkness by Andina Azya Rahmadani, written on 3 September 2024 and published on 21 August 2026.">
+
 <meta name="author" content="Andina Azya Rahmadani">
 
+<link rel="canonical" href="https://andinaazya.github.io/archive/light-in-the-darkness.html">
+
+
+<!-- STRUCTURED DATA -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Light in the Darkness",
+  "alternateName": "Cahaya di Tengah Kegelapan",
+  "author": {
+    "@type": "Person",
+    "name": "Andina Azya Rahmadani"
+  },
+  "dateCreated": "2024-09-03",
+  "datePublished": "2026-08-21",
+  "inLanguage": "id",
+  "genre": "Poetry",
+  "url": "https://andinaazya.github.io/archive/light-in-the-darkness.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Where Words Remain",
+    "url": "https://andinaazya.github.io/"
+  },
+  "about": "A poem about finding strength, comfort, and hope through the presence of someone who becomes a light during difficult moments."
+}
+</script>
+
+
 <style>
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -19,30 +58,38 @@ body {
     background: #f5f0e8;
     color: #292621;
     font-family: Arial, sans-serif;
-    line-height: 1.7;
 }
 
-.container {
-    max-width: 850px;
-    margin: auto;
-    padding: 80px 7%;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-.back {
+nav {
+    padding: 30px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 21px;
+}
+
+.back-home {
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    text-decoration: none;
-    color: inherit;
-    opacity: .55;
 }
 
-.back:hover {
-    opacity: 1;
+main {
+    max-width: 850px;
+    margin: auto;
+    padding: 100px 7% 0;
 }
 
 .label {
-    margin-top: 100px;
     font-size: 10px;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -50,176 +97,470 @@ body {
 }
 
 h1 {
-    margin: 25px 0 10px;
     font-family: Georgia, serif;
+    font-size: clamp(55px, 9vw, 95px);
     font-weight: normal;
-    font-size: clamp(48px, 8vw, 82px);
-    line-height: 1;
+    line-height: .95;
+    margin: 25px 0 15px;
 }
 
 .author {
-    font-family: Georgia, serif;
-    font-size: 18px;
-    opacity: .7;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: .55;
 }
 
 .divider {
-    margin: 60px 0;
-    border: 0;
-    border-top: 1px solid #aaa198;
+    width: 100%;
+    height: 1px;
+    background: #aaa198;
+    margin: 65px 0;
 }
 
-h2 {
-    margin-top: 55px;
+section {
+    margin-bottom: 75px;
+}
+
+.section-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: .5;
+    margin-bottom: 25px;
+}
+
+.text {
+    max-width: 650px;
     font-family: Georgia, serif;
-    font-weight: normal;
-    font-size: 30px;
+    font-size: 19px;
+    line-height: 1.9;
 }
 
-p {
-    max-width: 700px;
+.text p {
+    margin: 0;
 }
 
-.meta {
-    font-size: 14px;
-    line-height: 2;
+
+/* A NOTE */
+
+.note-section {
+    background: #292621;
+    color: #f5f0e8;
+    margin-left: -8.5%;
+    margin-right: -8.5%;
+    padding: 80px 8.5%;
+}
+
+.note-section .section-label {
+    opacity: .55;
 }
 
 .note {
+    max-width: 650px;
     font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 18px;
+    font-size: 19px;
+    line-height: 1.9;
+}
+
+.note p {
+    margin: 0;
+}
+
+
+/* WORK DETAILS */
+
+.details-section {
+    padding-top: 5px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #aaa198;
+}
+
+.detail {
+    padding: 20px 0;
+    border-bottom: 1px solid #aaa198;
+}
+
+.detail-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: .5;
+    margin-bottom: 8px;
+}
+
+.detail-value {
+    font-family: Georgia, serif;
+    font-size: 17px;
+}
+
+
+/* THE POEM */
+
+.poem-section {
+    background: #292621;
+    color: #f5f0e8;
+    margin-left: -8.5%;
+    margin-right: -8.5%;
+    padding: 80px 8.5%;
+    margin-bottom: 0;
+}
+
+.poem-section .section-label {
+    opacity: .55;
+}
+
+.read-poem {
+    display: inline-block;
+    margin-top: 5px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f5f0e8;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.read-poem:hover {
+    opacity: .6;
+}
+
+
+/* NAVIGATION */
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0 90px;
+}
+
+.navigation a {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.navigation a:hover {
+    opacity: .5;
 }
 
 footer {
-    margin-top: 100px;
-    padding-top: 30px;
+    padding: 40px 7%;
     border-top: 1px solid #aaa198;
     font-size: 9px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    opacity: .6;
 }
 
+
+/* MOBILE */
+
 @media (max-width: 700px) {
-    .container {
-        padding: 50px 6%;
+
+    nav {
+        padding: 23px 6%;
     }
 
-    .label {
-        margin-top: 70px;
+    .logo {
+        font-size: 18px;
+    }
+
+    main {
+        padding: 70px 6% 0;
     }
 
     h1 {
-        font-size: 50px;
+        font-size: 60px;
     }
+
+    .text,
+    .note {
+        font-size: 18px;
+        line-height: 1.9;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+    }
+
+    .note-section,
+    .poem-section {
+        margin-left: -6.8%;
+        margin-right: -6.8%;
+        padding-left: 6.8%;
+        padding-right: 6.8%;
+    }
+
+    .note-section {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .poem-section {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .navigation {
+        gap: 25px;
+        align-items: flex-start;
+    }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
-<div class="container">
 
-<a href="../index.html" class="back">← Back to Where Words Remain</a>
+<!-- NAVIGATION -->
 
-<div class="label">
-Personal Work Archive · 02
-</div>
+<nav>
 
-<h1>
-Light in the Darkness
-</h1>
+    <a href="../index.html" class="logo">
+        Where Words Remain
+    </a>
 
-<div class="author">
-By Andina Azya Rahmadani
-</div>
+    <a href="../index.html#archive" class="back-home">
+        ← Back to Archive
+    </a>
 
-<hr class="divider">
+</nav>
 
-<h2>01 · Work Identity</h2>
 
-<div class="meta">
-<strong>Title:</strong> Light in the Darkness<br>
-<strong>Author:</strong> Andina Azya Rahmadani<br>
-<strong>Written:</strong> 3 September 2024<br>
-<strong>Status:</strong> Published
-</div>
+<main>
 
-<h2>02 · About the Work</h2>
 
-<p>
-Light in the Darkness is a personal poem about finding strength,
-comfort, and hope through the presence of someone who unknowingly
-became a source of motivation.
-</p>
+    <div class="label">
+        Archive II
+    </div>
 
-<h2>03 · Inspiration</h2>
 
-<p>
-The poem was inspired by an idol who motivated me to get through
-everyday life. There were moments when I felt like I had no one
-around me. Seeing him smile through social media reminded me that
-I still had someone to look forward to, even though he does not
-know that I exist.
-</p>
+    <h1>
+        Light in the Darkness
+    </h1>
 
-<h2>04 · Work Details</h2>
 
-<div class="meta">
-<strong>Original Version:</strong> 3 September 2024<br>
-<strong>Public Version:</strong> Revised for publication<br>
-<strong>Language:</strong> Indonesian<br>
-<strong>Form:</strong> Free verse
-</div>
+    <div class="author">
+        By: Andina Azya Rahmadani
+    </div>
 
-<h2>05 · Version History</h2>
 
-<p>
-<strong>2024</strong><br>
-Original version written on 3 September 2024.
-</p>
+    <div class="divider"></div>
 
-<p>
-<strong>2026</strong><br>
-The poem was revised lightly for publication while preserving
-its original meaning and emotional core.
-</p>
 
-<h2>06 · Publication Record</h2>
+    <!-- ABOUT THE WORK -->
 
-<div class="meta">
-<strong>Publication Status:</strong> Published<br>
-<strong>Publication Platform:</strong> Where Words Remain<br>
-<strong>Published:</strong> 2026
-</div>
+    <section>
 
-<h2>07 · Personal Context</h2>
+        <div class="section-label">
+            About the Work
+        </div>
 
-<p>
-The poem represents a period when music, words, and the presence
-of an idol became a small source of strength during difficult days.
-</p>
+        <div class="text">
 
-<h2>08 · Ownership Record</h2>
+            <p>
+                Light in the Darkness portrays how someone can become
+                a source of strength and hope during difficult moments.
+                Through the image of light in the darkness, the poem
+                expresses how inspiration from someone admired can provide
+                comfort, courage, and a reason to keep moving forward.
+            </p>
 
-<p>
-This work was originally written by Andina Azya Rahmadani on
-3 September 2024.
-</p>
+        </div>
 
-<h2>09 · Author's Notes</h2>
+    </section>
 
-<p class="note">
-Some people may never know how much they helped us survive a
-difficult moment. This poem is a quiet way of remembering that.
-</p>
+
+    <!-- A NOTE -->
+
+    <section class="note-section">
+
+        <div class="section-label">
+            A Note
+        </div>
+
+        <div class="note">
+
+            <p>
+                Light in the Darkness was written from a quiet feeling
+                of gratitude toward someone whose presence became meaningful
+                in my everyday life. Sometimes, even from a distance,
+                someone's smile, words, or presence can make difficult
+                days feel a little lighter.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- WORK DETAILS -->
+
+    <section class="details-section">
+
+        <div class="section-label">
+            Work Details
+        </div>
+
+
+        <div class="details">
+
+
+            <div class="detail">
+
+                <div class="detail-label">
+                    Written
+                </div>
+
+                <div class="detail-value">
+                    3 September 2024
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <div class="detail-label">
+                    Published
+                </div>
+
+                <div class="detail-value">
+                    21 August 2026
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <div class="detail-label">
+                    Original Title
+                </div>
+
+                <div class="detail-value">
+                    Cahaya di Tengah Kegelapan
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <div class="detail-label">
+                    Language
+                </div>
+
+                <div class="detail-value">
+                    Indonesian
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <div class="detail-label">
+                    Type
+                </div>
+
+                <div class="detail-value">
+                    Poetry
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <div class="detail-label">
+                    Collection
+                </div>
+
+                <div class="detail-value">
+                    Where Words Remain
+                </div>
+
+            </div>
+
+
+            <div class="detail">
+
+                <div class="detail-label">
+                    Status
+                </div>
+
+                <div class="detail-value">
+                    Published
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- THE POEM -->
+
+    <section class="poem-section">
+
+        <div class="section-label">
+            The Poem
+        </div>
+
+        <a href="../poems/light-in-the-darkness.html"
+           class="read-poem">
+
+            Read the Complete Poem →
+
+        </a>
+
+    </section>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="navigation">
+
+        <a href="../index.html#archive">
+            ← Back to Archive
+        </a>
+
+        <a href="../poems/light-in-the-darkness.html">
+            Read the Poem →
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<!-- FOOTER -->
 
 <footer>
-PRIVATE LITERARY ARCHIVE · ANDINA AZYA RAHMADANI
+
+    Where Words Remain
+
+    <br><br>
+
+    A Personal Poetry Archive
+
 </footer>
 
-</div>
 
 </body>
+
 </html>
